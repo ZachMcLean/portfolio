@@ -2,6 +2,10 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Link from "next/link";
+import { BsArrowRight, BsLinkedin } from "react-icons/bs";
+import { HiDownload } from "react-icons/hi";
+import { FaGithubSquare } from "react-icons/fa";
 
 const Intro = () => {
 	return (
@@ -53,6 +57,42 @@ const Intro = () => {
 				building <span className="italic">sites & apps</span>. My focus is{" "}
 				<span className="underline">React (Next.js)</span>.
 			</motion.p>
+
+			<motion.div
+				className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium"
+				initial={{ opacity: 0, y: 100 }}
+				animate={{ opacity: 1, y: 0 }}
+				transition={{
+					delay: 0.1,
+				}}
+			>
+				<Link
+					href="#contact"
+					//  Group class in tailwind
+					className="group flex items-center gap-2 bg-gray-900 text-white px-7 py-3 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
+				>
+					Contact me here
+					<BsArrowRight className=" opacity-70 group-hover:translate-x-1 transition" />
+				</Link>
+				<a
+					href=""
+					className="flex items-center gap-2 bg-white  px-7 py-3 rounded-full"
+				>
+					Download CV <HiDownload />
+				</a>
+				<a
+					href=""
+					className="flex items-center gap-2 bg-white text-gray-700 p-4 rounded-full"
+				>
+					<BsLinkedin />
+				</a>
+				<a
+					href=""
+					className="text-[1.35rem] flex items-center gap-2 bg-white text-gray-700 p-4 rounded-full"
+				>
+					<FaGithubSquare />
+				</a>
+			</motion.div>
 		</section>
 	);
 };
