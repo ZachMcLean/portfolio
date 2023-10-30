@@ -75,20 +75,24 @@ const Intro = () => {
 					<BsArrowRight className=" opacity-70 group-hover:translate-x-1 transition" />
 				</Link>
 				<a
-					href=""
-					className="flex items-center gap-2 bg-white  px-7 py-3 rounded-full"
+					href="/Tech-Resume.pdf"
+					download
+					className="group flex items-center gap-2 bg-white  px-7 py-3 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer border border-black/10"
 				>
-					Download CV <HiDownload />
+					Download CV{" "}
+					<HiDownload className="opacity-60 group-hover:scale-300 transition" />
 				</a>
 				<a
-					href=""
-					className="flex items-center gap-2 bg-white text-gray-700 p-4 rounded-full"
+					href="https://www.linkedin.com/in/zach-mclean-92a5391b3/"
+					target="_blank"
+					className="flex items-center gap-2 bg-white text-gray-700 p-4 rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer border border-black/10"
 				>
 					<BsLinkedin />
 				</a>
 				<a
-					href=""
-					className="text-[1.35rem] flex items-center gap-2 bg-white text-gray-700 p-4 rounded-full"
+					href="https://github.com/ZachMcLean"
+					target="_blank"
+					className="text-[1.35rem] flex items-center gap-2 bg-white text-gray-700 p-4 rounded-full focus:scale-[1.15] hover:text-gray-950 hover:scale-[1.15] active:scale-105 transition cursor-pointer border border-black/10"
 				>
 					<FaGithubSquare />
 				</a>
