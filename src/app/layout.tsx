@@ -15,7 +15,9 @@ export default function RootLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<html lang="en">
+		// whole page scroll smooth for # routing
+		// we add ! to override any default behavior
+		<html lang="en" className="!scroll-smooth">
 			<body
 				className={`${inter.className} bg-gray-50 text-gray-950 relative pt-28 sm:pt-36`}
 			>
