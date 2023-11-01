@@ -1,14 +1,15 @@
 "use client";
 import React, { useState, createContext, useContext } from "react";
-import { links } from "@/lib/data";
+import type { SectionName } from "@/lib/types";
 
-type SectionName = (typeof links)[number]["name"];
 type ActiveSectionContextProviderProps = {
 	children: React.ReactNode;
 };
 type ActiveSectionContextType = {
 	activeSection: SectionName;
 	setActiveSection: React.Dispatch<React.SetStateAction<SectionName>>;
+	timeOfLastClick: number;
+	setTimeOfLastClick: React.Dispatch<React.SetStateAction<number>>;
 };
 
 export const ActiveSectionContext =
@@ -18,11 +19,17 @@ export default function ActiveSectionContextProvider({
 	children,
 }: ActiveSectionContextProviderProps) {
 	const [activeSection, setActiveSection] = useState<SectionName>("Home");
+	// State to be used to disable the intersection observer temporarily when user
+	// clicks on a header link. This will prevent the wierd stutter behavior
+	const [timeOfLastClick, setTimeOfLastClick] = useState<number>(0);
+
 	return (
 		<ActiveSectionContext.Provider
 			value={{
 				activeSection,
 				setActiveSection,
+				timeOfLastClick,
+				setTimeOfLastClick,
 			}}
 		>
 			{children}
