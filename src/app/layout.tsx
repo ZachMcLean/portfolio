@@ -1,12 +1,14 @@
 import Header from "@/components/Header";
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Inter, JetBrains_Mono, Fira_Code } from "next/font/google";
 import ActiveSectionContextProvider from "@/context/active-section-context";
 import { Toaster } from "react-hot-toast";
 import Footer from "@/components/Footer";
 import ThemeSwitch from "@/components/theme-switch";
 
 const inter = Inter({ subsets: ["latin"] });
+const jetbrains = JetBrains_Mono({ subsets: ["latin"] });
+const fira = Fira_Code({ subsets: ["latin"] });
 
 export const metadata = {
 	title: "Zach McLean | Portfolio",
@@ -23,8 +25,8 @@ export default function RootLayout({
 		// we add ! to override any default behavior
 		<html lang="en" className="!scroll-smooth">
 			<body
-				className={`${inter.className} 
-						bg-gray-50 text-gray-950 relative pt-28 sm:pt-36
+				className={`${fira.className} 
+						bg-gray-50 text-gray-950 relative pt-[4.6rem] 
 						dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90
 						`}
 			>
@@ -48,7 +50,6 @@ export default function RootLayout({
 					<Footer />
 					<Toaster />
 				</ActiveSectionContextProvider>
-
 				<ThemeSwitch />
 			</body>
 		</html>

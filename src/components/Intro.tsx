@@ -18,9 +18,9 @@ const Intro = () => {
 		<section
 			ref={ref}
 			id="home"
-			className="scroll-mt-[100rem] mb-28 max-w-[50rem] text-center sm:mb-0"
+			className="scroll-mt-[100rem] w-full mr-28 my-36 max-w-[80rem] text-left "
 		>
-			<div className="flex items-center justify-center">
+			{/* <div className="flex items-center justify-center">
 				<div className="relative">
 					<motion.div
 						initial={{ opacity: 0, scale: 0 }}
@@ -56,21 +56,42 @@ const Intro = () => {
 						🚀
 					</motion.span>
 				</div>
-			</div>
+			</div> */}
+
+			{/* Main H1 */}
 			<motion.h1
-				className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
+				className="text-8xl px-4 mb-6"
 				initial={{ opacity: 0, y: 100 }}
 				animate={{ opacity: 1, y: 0 }}
 			>
-				<span className="font-bold">Hello, I'm Zach!</span> I'm a{" "}
-				<span className="font-bold">full-stack developer</span> with{" "}
-				<span className="font-bold">3 years</span> of experience. I enjoy
-				building <span className="italic">sites & apps</span>. My focus is{" "}
-				<span className="underline">React (Next.js)</span>.
+				<span className="font-bold">Hey, I'm Zach.</span>
 			</motion.h1>
 
+			<motion.h2
+				className="text-4xl px-4"
+				initial={{ opacity: 0, y: 100 }}
+				animate={{ opacity: 1, y: 0 }}
+			>
+				I'm a <span className="font-bold">full-stack developer</span>
+			</motion.h2>
+
+			{/* Main H2 */}
+			<motion.p
+				className="mb-8 mt-4 px-4 text-xl font-light !leading-[1.8] "
+				initial={{ opacity: 0, y: 100 }}
+				animate={{ opacity: 1, y: 0 }}
+			>
+				I've spent the last <span className="font-bold">3 years</span> learning
+				fullstack web-development while <br /> studying at university. I enjoy
+				building <span className="italic">sites & apps</span> with <br />
+				<span className="underline">React (Next.js)</span> and{" "}
+				<span className="underline">C# (ASP.Net Core)</span> I also love playing
+				and recording <span className="font-bold">guitar!</span>
+			</motion.p>
+
+			{/* Buttons */}
 			<motion.div
-				className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium"
+				className="flex flex-col sm:flex-row items-center justify-start gap-2 px-4 text-lg font-medium"
 				initial={{ opacity: 0, y: 100 }}
 				animate={{ opacity: 1, y: 0 }}
 				transition={{
