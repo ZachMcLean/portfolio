@@ -5,6 +5,7 @@ import ActiveSectionContextProvider from "@/context/active-section-context";
 import { Toaster } from "react-hot-toast";
 import Footer from "@/components/Footer";
 import ThemeSwitch from "@/components/theme-switch";
+import ScrollTopButton from "@/components/scroll-top-button";
 
 const inter = Inter({ subsets: ["latin"] });
 const jetbrains = JetBrains_Mono({ subsets: ["latin"] });
@@ -25,7 +26,7 @@ export default function RootLayout({
 		// we add ! to override any default behavior
 		<html lang="en" className="!scroll-smooth">
 			<body
-				className={`${fira.className} 
+				className={`${inter.className} 
 						bg-gray-50 text-gray-950 relative pt-[4.6rem] 
 						dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90
 						`}
@@ -49,6 +50,8 @@ export default function RootLayout({
 					{children}
 					<Footer />
 					<Toaster />
+
+					<ScrollTopButton />
 				</ActiveSectionContextProvider>
 				<ThemeSwitch />
 			</body>
