@@ -9,6 +9,7 @@ import { FaGithubSquare } from "react-icons/fa";
 import ZachPhoto from "../../public/Zach-Business-Headshot-edit.jpg";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
+import Typed from "react-typed";
 
 const Intro = () => {
 	const { ref } = useSectionInView("Home", 0.5);
@@ -72,7 +73,19 @@ const Intro = () => {
 				initial={{ opacity: 0, y: 100 }}
 				animate={{ opacity: 1, y: 0 }}
 			>
-				I'm a <span className="font-bold">full-stack developer</span>
+				{/* I'm a <span className="font-bold">full-stack developer</span> */}
+				<span>I'm a</span>
+				<Typed
+					className="md:text-5xl sm:text-4xl text-xl font-bold md:pl-4 pl-2"
+					strings={[
+						"Full-Stack Developer",
+						"Computer Science Student",
+						"Web Developer",
+					]}
+					typeSpeed={40}
+					backSpeed={40}
+					loop
+				/>
 			</motion.h2>
 
 			{/* Main H2 */}
