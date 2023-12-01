@@ -30,7 +30,7 @@ const About = () => {
 				feeling of finally figuring out a solution to a problem. My core stack
 				is{" "}
 				<span className="font-medium">
-					React, Next.js, Node.js, and MongoDB
+					React, Next.js, Asp .Net Core, and PostgreSQL
 				</span>
 				. I am also familiar with TypeScript and Prisma. I am always looking to
 				learn new technologies.

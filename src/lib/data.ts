@@ -6,6 +6,8 @@ import corpcommentImg from "../../public/corpcomment.png";
 import rmtdevImg from "../../public/rmtdev.png";
 import wordanalyticsImg from "../../public/wordanalytics.png";
 
+import paragonImg from "../../public/Paragon-pic-01.png";
+
 export const links = [
 	{
 		name: "Home",
@@ -72,9 +74,16 @@ export const projectsData = [
 	{
 		title: "Paragon-Calendar",
 		description:
-			"Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-		tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-		imageUrl: rmtdevImg,
+			"A calendar & productivity app for creatives and developers. I was the full-stack developer. It has features like User Authentication, CRUD operations for Events and Notes, and more.",
+		tags: [
+			"React",
+			"TypeScript",
+			"Next.js",
+			"Tailwind",
+			"Prisma",
+			"Postgresql",
+		],
+		imageUrl: paragonImg,
 	},
 	{
 		title: "Social Media App",
