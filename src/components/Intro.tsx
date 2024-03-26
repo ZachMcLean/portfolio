@@ -19,46 +19,10 @@ const Intro = () => {
 		<section
 			ref={ref}
 			id="home"
-			className="scroll-mt-[100rem] w-full mr-28 my-36 max-w-[80rem] text-left "
+			className="flex scroll-mt-[100rem] w-full mr-28 my-36 max-w-[80rem] text-left "
 		>
-			{/* <div className="flex items-center justify-center">
-				<div className="relative">
-					<motion.div
-						initial={{ opacity: 0, scale: 0 }}
-						animate={{ opacity: 1, scale: 1 }}
-						transition={{
-							type: "tween",
-							duration: 0.2,
-						}}
-					>
-						<Image
-							alt="Portrait of Zach McLean"
-							src={ZachPhoto}
-							// src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=368&h=368&q=100"
-							// width="192"
-							// height="192"
-							quality="95"
-							priority={true}
-							className="h-24 w-24 rounded-full object-cover border-[0.35rem] border-white shadow-xl"
-						/>
-					</motion.div>
-
-					<motion.span
-						className="text-4xl absolute bottom-0 right-0"
-						initial={{ opacity: 0, scale: 0 }}
-						animate={{ opacity: 1, scale: 1 }}
-						transition={{
-							type: "spring",
-							stiffness: 125,
-							delay: 0.1,
-							duration: 0.7,
-						}}
-					>
-						🚀
-					</motion.span>
-				</div>
-			</div> */}
-
+			
+      <div className="pr-28">
 			{/* Main H1 */}
 			<motion.h1
 				className="text-8xl px-4 mb-6"
@@ -94,7 +58,7 @@ const Intro = () => {
 				initial={{ opacity: 0, y: 100 }}
 				animate={{ opacity: 1, y: 0 }}
 			>
-				I've spent the last <span className="font-bold">3 years</span> learning
+				I've spent the last <span className="font-bold">4 years</span> learning
 				fullstack web-development while <br /> studying at university. I enjoy
 				building <span className="italic">sites & apps</span> with <br />
 				<span className="underline">React (Next.js)</span> and{" "}
@@ -160,6 +124,34 @@ const Intro = () => {
 					<FaGithubSquare />
 				</a>
 			</motion.div>
+      </div>
+      <div className="flex justify-center items-left w-full max-w-[30rem] ">
+      <div className="flex items-center justify-left">
+				<div className="relative">
+					<motion.div
+						initial={{ opacity: 0, scale: 0 }}
+						animate={{ opacity: 1, scale: 1 }}
+						transition={{
+							type: "tween",
+							duration: 0.2,
+						}}
+					>
+						<Image
+							alt="Portrait of Zach McLean"
+							src={ZachPhoto}
+							// src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=368&h=368&q=100"
+							// width="192"
+							// height="192"
+							quality="95"
+							priority={true}
+							className="h-96 w-96 rounded-full object-cover border-[0.35rem] border-white shadow-xl"
+						/>
+					</motion.div>
+
+				</div>
+			</div>
+      </div>
+
 		</section>
 	);
 };
